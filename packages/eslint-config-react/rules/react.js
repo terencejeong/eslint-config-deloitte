@@ -1,6 +1,7 @@
 module.exports = {
 	plugins: [
 		'react',
+		'react-hooks',
 	],
 
 	parserOptions: {
@@ -330,5 +331,13 @@ module.exports = {
 		'react/jsx-max-depth': ['warn', {
 			max: 8,
 		}],
+
+		// Checks rules of hooks
+		// https://reactjs.org/docs/hooks-rules.html
+		'react-hooks/rules-of-hooks': 'error',
+
+		// Checks effect dependencies
+		'react-hooks/exhaustive-deps': 'warn',
+
 	},
 };
